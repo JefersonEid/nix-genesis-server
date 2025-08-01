@@ -44,7 +44,7 @@ function caminhoArquivo(pergunta, categoria) {
   return path.join(__dirname, "respostas", categoria, `${nome}.txt`);
 }
 
-app.post("/pergunta", async (req, res) => {
+app.post("/api/genesis", async (req, res) => {
   const pergunta = req.body.pergunta?.toLowerCase().trim();
   if (!pergunta) return res.status(400).json({ erro: "Pergunta inválida" });
 
